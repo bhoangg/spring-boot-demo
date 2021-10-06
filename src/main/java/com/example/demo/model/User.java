@@ -32,6 +32,26 @@ public class User {
 
     private boolean enabled;
 
+    public AuthProvider getProvider() {
+        return provider;
+    }
+
+    public void setProvider(AuthProvider provider) {
+        this.provider = provider;
+    }
+
+    public String getProviderId() {
+        return providerId;
+    }
+
+    public void setProviderId(String providerId) {
+        this.providerId = providerId;
+    }
+
+    private AuthProvider provider;
+
+    private String providerId;
+
     public  User(){};
     public User(String username, String email, String password) {
         this.username = username;
@@ -52,8 +72,8 @@ public class User {
         return email;
     }
 
-    public void setUseremail(String user_email) {
-        this.email = user_email;
+    public void setUseremail(String email) {
+        this.email = email;
     }
 
     public String getUsername() {
